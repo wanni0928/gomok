@@ -109,11 +109,6 @@ public class Gomoku implements Simulatable, Winnable, Playable, Printable {
         Player player = null;
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board.length; j++) {
-//                if(board[i][j] == white){
-//                    whiteCnt++;
-//                }else if(board[i][j] == black){
-//                    blackCnt++;
-//                }
                 //3-3
                 int whiteCnt = 0;
                 int blackCnt = 0;
@@ -174,32 +169,58 @@ public class Gomoku implements Simulatable, Winnable, Playable, Printable {
                         break;
                     }
                 }
+
                 // 수평
                 if(j < board[i].length + 5){
-                    if(board[i][j] == white && board[i][j + 1] == white && board[i][j + 2] == white && board[i][j + 3] == white && board[i][j + 4] == white ){
+                    if(board[i][j] == white
+                            && board[i][j + 1] == white
+                            && board[i][j + 2] == white
+                            && board[i][j + 3] == white
+                            && board[i][j + 4] == white ){
                         player = player1;
                         break;
-                    }else if(board[i][j] == black && board[i][j + 1] == black && board[i][j + 2] == black && board[i][j + 3] == black && board[i][j + 4] == black ){
+                    }else if(board[i][j] == black
+                            && board[i][j + 1] == black
+                            && board[i][j + 2] == black
+                            && board[i][j + 3] == black
+                            && board[i][j + 4] == black ){
                         player = player2;
                         break;
                     }
                 }
+
                 // 수직
                 if(i < board.length + 5){
-                    if(board[i][j] == white && board[i + 1][j] == white && board[i + 2][j] == white && board[i + 3][j] == white && board[i + 4][j] == white ){
+                    if(board[i][j] == white
+                            && board[i + 1][j] == white
+                            && board[i + 2][j] == white
+                            && board[i + 3][j] == white
+                            && board[i + 4][j] == white ){
                         player = player1;
                         break;
-                    }else if(board[i][j] == black && board[i + 1][j] == black && board[i + 2][j] == black && board[i + 3][j] == black && board[i + 4][j] == black ){
+                    }else if(board[i][j] == black
+                            && board[i + 1][j] == black
+                            && board[i + 2][j] == black
+                            && board[i + 3][j] == black
+                            && board[i + 4][j] == black ){
                         player = player2;
                         break;
                     }
                 }
+
                 // 대각선1
                 if(i < board.length + 5 && j < board[i].length + 5){
-                    if(board[i][j] == white && board[i + 1][j + 1] == white && board[i + 2][j + 2] == white && board[i + 3][j + 3] == white && board[i + 4][j + 4] == white ){
+                    if(board[i][j] == white && board[i + 1][j + 1] == white
+                            && board[i + 2][j + 2] == white
+                            && board[i + 3][j + 3] == white
+                            && board[i + 4][j + 4] == white ){
                         player = player1;
                         break;
-                    }else if(board[i][j] == black && board[i + 1][j + 1] == black && board[i + 2][j + 2] == black && board[i + 3][j + 3] == black && board[i + 4][j + 4] == black ){
+                    }else if(board[i][j] == black
+                            && board[i + 1][j + 1] == black
+                            && board[i + 2][j + 2] == black
+                            && board[i + 3][j + 3] == black
+                            && board[i + 4][j + 4] == black ){
                         player = player2;
                         break;
                     }
@@ -207,10 +228,18 @@ public class Gomoku implements Simulatable, Winnable, Playable, Printable {
 
                 // 대각선2
                 if(j > 3 && i < board.length - 5){
-                    if(board[i][j] == white && board[i + 1][j - 1] == white && board[i + 2][j - 2] == white && board[i + 3][j - 3] == white && board[i + 4][j - 4] == white ){
+                    if(board[i][j] == white
+                            && board[i + 1][j - 1] == white
+                            && board[i + 2][j - 2] == white
+                            && board[i + 3][j - 3] == white
+                            && board[i + 4][j - 4] == white ){
                         player = player1;
                         break;
-                    }else if(board[i][j] == black && board[i + 1][j - 1] == black && board[i + 2][j - 2] == black && board[i + 3][j - 3] == black && board[i + 4][j - 4] == black ){
+                    }else if(board[i][j] == black
+                            && board[i + 1][j - 1] == black
+                            && board[i + 2][j - 2] == black
+                            && board[i + 3][j - 3] == black
+                            && board[i + 4][j - 4] == black ){
                         player = player2;
                         break;
                     }
